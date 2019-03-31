@@ -9,6 +9,5 @@ namespace PasswordsBase
     public class Autorization
     {
         public static string Login;
-        public static string Text;
     }
 }

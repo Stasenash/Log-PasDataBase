@@ -30,14 +30,15 @@
         {
             this.downLine = new System.Windows.Forms.PictureBox();
             this.upLine = new System.Windows.Forms.PictureBox();
-            this.LoginsList = new System.Windows.Forms.ListBox();
-            this.PasswordsList = new System.Windows.Forms.ListBox();
+            this.LessonsList = new System.Windows.Forms.ListBox();
+            this.TimeList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addLTBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.personNameLabel = new System.Windows.Forms.Label();
             this.signOutBtn = new System.Windows.Forms.Button();
+            this.refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.downLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,23 +62,27 @@
             this.upLine.TabIndex = 18;
             this.upLine.TabStop = false;
             // 
-            // LoginsList
+            // LessonsList
             // 
-            this.LoginsList.BackColor = System.Drawing.Color.LightYellow;
-            this.LoginsList.FormattingEnabled = true;
-            this.LoginsList.Location = new System.Drawing.Point(12, 120);
-            this.LoginsList.Name = "LoginsList";
-            this.LoginsList.Size = new System.Drawing.Size(228, 342);
-            this.LoginsList.TabIndex = 20;
+            this.LessonsList.BackColor = System.Drawing.Color.LightYellow;
+            this.LessonsList.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LessonsList.FormattingEnabled = true;
+            this.LessonsList.ItemHeight = 24;
+            this.LessonsList.Location = new System.Drawing.Point(12, 120);
+            this.LessonsList.Name = "LessonsList";
+            this.LessonsList.Size = new System.Drawing.Size(228, 340);
+            this.LessonsList.TabIndex = 20;
             // 
-            // PasswordsList
+            // TimeList
             // 
-            this.PasswordsList.BackColor = System.Drawing.Color.LightYellow;
-            this.PasswordsList.FormattingEnabled = true;
-            this.PasswordsList.Location = new System.Drawing.Point(246, 120);
-            this.PasswordsList.Name = "PasswordsList";
-            this.PasswordsList.Size = new System.Drawing.Size(228, 342);
-            this.PasswordsList.TabIndex = 21;
+            this.TimeList.BackColor = System.Drawing.Color.LightYellow;
+            this.TimeList.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F);
+            this.TimeList.FormattingEnabled = true;
+            this.TimeList.ItemHeight = 24;
+            this.TimeList.Location = new System.Drawing.Point(246, 120);
+            this.TimeList.Name = "TimeList";
+            this.TimeList.Size = new System.Drawing.Size(228, 340);
+            this.TimeList.TabIndex = 21;
             // 
             // label1
             // 
@@ -85,9 +90,9 @@
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F);
             this.label1.Location = new System.Drawing.Point(12, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 24);
+            this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Logins";
+            this.label1.Text = "Lesson";
             // 
             // label2
             // 
@@ -95,19 +100,20 @@
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F);
             this.label2.Location = new System.Drawing.Point(242, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 24);
+            this.label2.Size = new System.Drawing.Size(57, 24);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Passwords";
+            this.label2.Text = "Time";
             // 
-            // button1
+            // addLTBtn
             // 
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(156, 514);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 35);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Add new log-pas";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addLTBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addLTBtn.Location = new System.Drawing.Point(156, 514);
+            this.addLTBtn.Name = "addLTBtn";
+            this.addLTBtn.Size = new System.Drawing.Size(167, 35);
+            this.addLTBtn.TabIndex = 24;
+            this.addLTBtn.Text = "Add new lesson-time";
+            this.addLTBtn.UseVisualStyleBackColor = true;
+            this.addLTBtn.Click += new System.EventHandler(this.addLTBtn_Click);
             // 
             // pictureBox1
             // 
@@ -140,20 +146,32 @@
             this.signOutBtn.UseVisualStyleBackColor = true;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
+            // refresh
+            // 
+            this.refresh.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.refresh.Location = new System.Drawing.Point(383, 88);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(75, 23);
+            this.refresh.TabIndex = 28;
+            this.refresh.Text = "refresh";
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
             // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(484, 561);
+            this.Controls.Add(this.refresh);
             this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.personNameLabel);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addLTBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.PasswordsList);
-            this.Controls.Add(this.LoginsList);
+            this.Controls.Add(this.TimeList);
+            this.Controls.Add(this.LessonsList);
             this.Controls.Add(this.downLine);
             this.Controls.Add(this.upLine);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -173,13 +191,14 @@
 
         private System.Windows.Forms.PictureBox downLine;
         private System.Windows.Forms.PictureBox upLine;
-        private System.Windows.Forms.ListBox LoginsList;
-        private System.Windows.Forms.ListBox PasswordsList;
+        private System.Windows.Forms.ListBox LessonsList;
+        private System.Windows.Forms.ListBox TimeList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addLTBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label personNameLabel;
         private System.Windows.Forms.Button signOutBtn;
+        private System.Windows.Forms.Button refresh;
     }
 }

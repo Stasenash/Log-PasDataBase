@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Data.SqlClient;
 using System.Data;
+using System.IO;
 
 namespace PasswordsBase
 {
@@ -66,9 +67,12 @@ namespace PasswordsBase
                 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\stasi\source\repos\PasswordsBase\PasswordsBase\AutorizationBase.mdf;Integrated Security=True";
                 sqlConnection = new SqlConnection(connectionString);
                 await sqlConnection.OpenAsync();
-                SqlCommand command = new SqlCommand("INSERT INTO [AutorizationTable] (Login, Password)VALUES(@Login, @Password)", sqlConnection);
+                File.Create($"{loginTB.Text}.txt");
+                var path = $"{loginTB.Text}.txt";
+                SqlCommand command = new SqlCommand("INSERT INTO [AutorizationTable] (Login, Password, [File])VALUES(@Login, @Password, @File)", sqlConnection);
                 command.Parameters.AddWithValue("Login", loginTB.Text);
                 command.Parameters.AddWithValue("Password", Encoder.Encode(passwordTB.Text));
+                command.Parameters.AddWithValue("File", path.ToString());
                 await command.ExecuteNonQueryAsync();
                 MessageBox.Show("You've signed up!", "Done!", MessageBoxButtons.OK);
             }

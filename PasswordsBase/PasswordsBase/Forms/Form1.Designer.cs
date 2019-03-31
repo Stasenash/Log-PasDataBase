@@ -45,7 +45,7 @@
             // loginTB
             // 
             this.loginTB.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F);
-            this.loginTB.Location = new System.Drawing.Point(120, 230);
+            this.loginTB.Location = new System.Drawing.Point(120, 213);
             this.loginTB.Name = "loginTB";
             this.loginTB.Size = new System.Drawing.Size(220, 31);
             this.loginTB.TabIndex = 0;
@@ -53,7 +53,7 @@
             // passwordTB
             // 
             this.passwordTB.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F);
-            this.passwordTB.Location = new System.Drawing.Point(120, 325);
+            this.passwordTB.Location = new System.Drawing.Point(120, 308);
             this.passwordTB.Name = "passwordTB";
             this.passwordTB.Size = new System.Drawing.Size(220, 31);
             this.passwordTB.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginLabel.Location = new System.Drawing.Point(117, 200);
+            this.loginLabel.Location = new System.Drawing.Point(117, 183);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(63, 24);
             this.loginLabel.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(117, 298);
+            this.label1.Location = new System.Drawing.Point(117, 281);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 24);
             this.label1.TabIndex = 3;
@@ -134,7 +134,7 @@
             this.incorrectLabel.AutoSize = true;
             this.incorrectLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F);
             this.incorrectLabel.ForeColor = System.Drawing.Color.Red;
-            this.incorrectLabel.Location = new System.Drawing.Point(103, 157);
+            this.incorrectLabel.Location = new System.Drawing.Point(103, 140);
             this.incorrectLabel.Name = "incorrectLabel";
             this.incorrectLabel.Size = new System.Drawing.Size(276, 24);
             this.incorrectLabel.TabIndex = 9;
